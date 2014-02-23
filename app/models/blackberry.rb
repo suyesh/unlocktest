@@ -1,0 +1,3 @@
+class Blackberry < ActiveRecord::Base
+  belongs_to :user
+end

@@ -1,0 +1,32 @@
+<%= form_for @htc, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :services, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :services,['HTC (2009-2012) $10 (Instant)','HTC (2009-2012) $6 (2-24hrs)','HTC(2013-2014) $34 (Instant)'],:prompt => "Select One", :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :imei, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :imei, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :response_email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :response_email, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :text_alert, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :text_alert, :class => 'text_field' %>
+    </div>
+  </div>
+  
+  <div class="form-actions">
+    <%= f.submit "Submit", :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                htcs_path, :class => 'btn' %>
+  </div>
+<% end %>
